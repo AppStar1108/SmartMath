@@ -1,11 +1,10 @@
 package com.example.hussain.smartmath;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
     DatabaseHelper helper = new DatabaseHelper(this);
@@ -21,21 +20,22 @@ public class LoginActivity extends AppCompatActivity {
             EditText b = (EditText)findViewById(R.id.logpassword);
             String pass = b.getText().toString();
 
-            String password = helper.searchPass(str);
-            if(pass.equals(password)){
-                Intent i = new Intent(LoginActivity.this, MainActivity.class);
+//            String password = helper.searchPass(str);
+//            if(pass.equals(password)){
+//                Intent i = new Intent(LoginActivity.this, MainActivity.class);
+//                i.putExtra("Username", str);
+//                startActivity(i);
+//            }else {
+//
+//                Toast temp = Toast.makeText(LoginActivity.this, "Wrong username and password, Please retry!", Toast.LENGTH_SHORT);
+//                temp.show();
+//            }
+            Intent i = new Intent(LoginActivity.this, MainActivity.class);
                 i.putExtra("Username", str);
                 startActivity(i);
-            }else {
-
-                Toast temp = Toast.makeText(LoginActivity.this, "Wrong username and password, Please retry!", Toast.LENGTH_SHORT);
-                temp.show();
-            }
 
 
-            Intent i = new Intent(LoginActivity.this, MainActivity.class);
-            i.putExtra("Username", str);
-            startActivity(i);
+
         }
         if(v.getId()==R.id.registerbt){
 
