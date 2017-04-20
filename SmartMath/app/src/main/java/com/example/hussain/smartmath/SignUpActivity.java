@@ -1,13 +1,13 @@
 package com.example.hussain.smartmath;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 
-public class SignUpActivity extends AppCompatActivity {
+public class SignUpActivity extends Activity {
     DatabaseHelper helper = new DatabaseHelper(this);
 
     @Override

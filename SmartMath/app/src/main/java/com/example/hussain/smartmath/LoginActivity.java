@@ -1,12 +1,12 @@
 package com.example.hussain.smartmath;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends Activity {
     DatabaseHelper helper = new DatabaseHelper(this);
 
 
@@ -30,18 +30,17 @@ public class LoginActivity extends AppCompatActivity {
 //                Toast temp = Toast.makeText(LoginActivity.this, "Wrong username and password, Please retry!", Toast.LENGTH_SHORT);
 //                temp.show();
 //            }
-            Intent i = new Intent(LoginActivity.this, MainActivity.class);
-                i.putExtra("Username", str);
-                startActivity(i);
 
 
-
-        }
-        if(v.getId()==R.id.registerbt){
-
-            Intent i = new Intent(LoginActivity.this, SignUpActivity.class);
+            Intent i = new Intent(LoginActivity.this, PetMainActivity.class);
+            i.putExtra("Username", str);
             startActivity(i);
         }
+//        if(v.getId()==R.id.registerbt){
+//
+//            Intent i = new Intent(LoginActivity.this, SignUpActivity.class);
+//            startActivity(i);
+//        }
     }
 
     @Override
