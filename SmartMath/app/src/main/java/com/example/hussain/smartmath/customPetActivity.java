@@ -8,7 +8,8 @@ import android.widget.ImageView;
 
 public class customPetActivity extends Activity {
 
-    ImageButton btn_bowtie,btn_color,btn_mouse,btn_hat;
+    ImageButton btn_bowtie,btn_color,btn_mouse,btn_hat,btn_left,btn_right;
+    createPetActivity crt_activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,8 @@ public class customPetActivity extends Activity {
         btn_color=(ImageButton) findViewById(R.id.btn_color);
         btn_mouse=(ImageButton) findViewById(R.id.btn_mouse);
         btn_hat=(ImageButton) findViewById(R.id.btn_hat);
+        btn_left=(ImageButton) findViewById(R.id.btn_small_left);
+        btn_right=(ImageButton) findViewById(R.id.btn_small_right);
 
         ImageView custom_pet=(ImageView)findViewById(R.id.img_customPet);
         ImageView custom_bowtie=(ImageView)findViewById(R.id.img_customBowtie);
@@ -47,6 +50,20 @@ public class customPetActivity extends Activity {
         });
 
         btn_mouse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        btn_left.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        btn_right.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
