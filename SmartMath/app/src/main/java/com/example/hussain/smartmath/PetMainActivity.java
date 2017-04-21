@@ -29,7 +29,7 @@ public class PetMainActivity extends Activity {
             public void onClick(View v) {
                 Intent toShop=new Intent(PetMainActivity.this, createPetActivity.class);
                 startActivity(toShop);
-                finish();
+                //finish();
             }
         });
 

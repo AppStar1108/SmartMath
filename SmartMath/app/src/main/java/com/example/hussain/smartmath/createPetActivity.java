@@ -20,6 +20,12 @@ public class createPetActivity extends Activity {
     public void setPet_name(String[] pet_name) {
         this.pet_name = pet_name;
     }
+    public int getPet_color(){
+        return pet_color;
+    };
+    public void setPet_color(int int_color){
+        pet_color=int_color;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +92,7 @@ public class createPetActivity extends Activity {
 
                 Intent toCreate=new Intent(createPetActivity.this, customPetActivity.class);
                 startActivity(toCreate);
-                finish();
+                //finish();
 
             }
         });
